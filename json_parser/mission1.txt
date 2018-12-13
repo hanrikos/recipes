@@ -1,0 +1,56 @@
+
+ 
+
+Please think about a way to parse Jsons.
+
+ 
+
+You�re not allowed to use anything other than regular shit of the language (like string, int, for, if, class functions etc. )
+
+ 
+
+No libraries are allowed .
+
+ 
+
+Your input is a file, with 1 or more jsons,
+
+the output of the program should be:
+
+ 
+
+I got a Json:   followed by a printout of the json itself, FOR EVERY JSON you get .
+
+ 
+
+So if I give you a file with 1 json:
+
+The output will be:
+
+ 
+
+I GOT a JSON:
+
+{   json data,  json data �.  }
+
+ 
+
+And if 2 jsons are in the file
+
+The output should be :
+
+ 
+
+I GOT a JSON:
+
+{   json data,  json data �.  }
+
+ 
+
+ 
+
+I GOT a JSON:
+
+{   json data,  json data �.  }
+
+ 
