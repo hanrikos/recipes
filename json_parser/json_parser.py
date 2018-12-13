@@ -14,7 +14,7 @@ def open_file(filename):
     return d
 
 
-def get_lines(data):
+def check_validation(data):
     open_braces = 0
     is_comment = False
     for index, c in enumerate(data):
@@ -26,6 +26,9 @@ def get_lines(data):
 
             if c == '}':
                 open_braces -= 1
+                if open_braces < 0:
+                    print("Sorry, the json is not valid")
+                    break
 
     if open_braces == 0:
         return True
@@ -64,7 +67,7 @@ def json_parser(data):
 def main(filename):
     # json_data = load_json_file(filename)
     json_data = open_file(filename)
-    is_json_valid = get_lines(str(json_data))
+    is_json_valid = check_validation(str(json_data))
     if is_json_valid:
         open_braces, close_braces, open_brackets, close_brackets = json_parser(str(json_data))
         print(open_braces, close_braces, open_brackets, close_brackets)
