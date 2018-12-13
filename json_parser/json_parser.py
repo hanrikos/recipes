@@ -5,14 +5,12 @@ import sys
 def load_json_file(filename):
     with open(filename) as json_data:
         d = json.load(json_data)
-        print(d)
     return d
 
 
 def open_file(filename):
     with open(filename, 'r') as my_file:
         d = my_file.read().replace('\n', '')
-        print(d)
     return d
 
 
@@ -68,7 +66,6 @@ def main(filename):
     json_data = open_file(filename)
     is_json_valid = get_lines(str(json_data))
     if is_json_valid:
-        print(json_data)
         open_braces, close_braces, open_brackets, close_brackets = json_parser(str(json_data))
         print(open_braces, close_braces, open_brackets, close_brackets)
 
