@@ -51,10 +51,10 @@ def json_parser(data):
             if c == '}':
                 close_braces += 1
                 if open_braces == close_braces:
-                    json1 = data[:index]
-                    json2 = data[index:]
-                    print(json1)
-                    print(json2)
+                    json1 = data[:index+1]
+                    json2 = data[index+1:]
+                    print("I GOT a JSON:\n\n{}".format(json1.replace(" ", "")))
+                    print("I GOT a JSON:\n\n{}".format(json2.replace(" ", "")))
                     break
             if c == '[':
                 open_brackets += 1
